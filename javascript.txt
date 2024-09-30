@@ -1,0 +1,99 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            identifier
+let varun = 29; // Varun is identifier
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            NaN USES
+NaN = Not a Number
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            NaN USES
+NaN + 2 // anything added to nan is also NaN.  
+only except NaN + 0 its like power operator its output will be 1. 
+NaN + 2 will also be NaN. 
+Its only applicable for  NaN ** 0 b'cuz anything to the power 0 is 1. It works the same here.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            NUMBER DATATYPE
+
+2power53 is the biggest number. that number data type can store in javascript
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            STRING DATATYPE
+
+'Thus search' => Single quote string. Usefull when you use " " Values.
+
+"Master" > Double quote string. Usefull when you use ' ' Values.
+
+`` => used for both single and double quotes text.
+
+Mainly used for embedding the code. Example:
+
+Let embed = `1+2 = ${1+2} `;
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            NULL DATATYPE USES
+null => nothing
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            Undefined DATATYPE USES
+Let dob;
+Console.log(dob);
+
+Undefined
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            MODAL Windows in JavaScript
+
+                                                    PROMPT MODAL
+Let input= prompt ('Age');
+Console.log(input);
+
+So when prompt is displayed on browser it has input box and below that we have cancel & ok.
+
+IF WE CLICK CANCEL IT TAKES AS NULL.
+
+IF WE CLICK OK WITH ENTERING ANY MESSAGE IT THEN IT TAKES AS EMPTY STRING. 
+
+EVEN IF I ENTER SOME NUMBER IT IS ALSO STRING
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            DEFAULT ARGUMENT
+Let input= prompt ('Age', '18');
+Console.log(input);
+
+18 is default argument
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            CONFIRM MODAL
+
+Let input=Confirm('Enter your Age');
+
+This will display ok & cancel button. 
+
+IF I CLICK OK IT IS STORED AS TRUE
+
+IF I CLICK CANCEL IT IS STORED AS FALSE
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-         
+                                            JavaScript Type Conversion
+
+In programming, type conversion is the process of converting data of one type to another. For example, converting string data to number.
+
+There are two types of type conversion in JavaScript:
+
+Implicit Conversion - Automatic type conversion.
+Explicit Conversion - Manual type conversion.
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                            Implict Conversion
+                                            
+Implict Conversion =>  console.log( '5' + '2' );   // '52'  (string concatenation)
+console.log( '5' * '2' );   // 10    (numeric multiplication)
+console.log( '5' / '2' );   // 2.5   (numeric division)
+console.log( '5' - '2' );   // 3     (numeric subtraction)
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
