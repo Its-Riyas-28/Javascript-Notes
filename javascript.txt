@@ -110,15 +110,24 @@ console.log(typeof age); //string
 *It just take number 23 as character now 23 is string.*
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                                2. Number conversion
+                                                2. Number to string conversion
 
 let age = 'true';
 console.log(typeof age); //string
-age = Number(age);  *In Explicit conversion to convert String datatype to string datatype the first letter in Number should be caps (i.e Number)*
+age = Number(age);  *In Explicit conversion to convert String datatype to number datatype the first letter in Number should be caps (i.e Number)*
 
 console.log(typeof age); //number * The datatype would be converted to number here now (i.e string to number)*
 console.log(age);       // NaN     *string to number (i.e string that's not character would be not a number)*
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                3. Number to Boolean conversion
+
+let age = true;
+console.log(typeof age); //boolean
+age = Number(age);  *In Explicit conversion to convert Boolean datatype to number datatype the first letter in Number should be caps (i.e Number)*
+
+console.log(typeof age); //number * The datatype would be converted from boolean to number here now (i.e boolean to number)*
+console.log(age);       // NaN    * string to number (i.e string that's not character would be not a number)*
+
 
 
