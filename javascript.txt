@@ -110,7 +110,7 @@ console.log(typeof age); //string
 *It just take number 23 as character now 23 is string.*
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                                2. Number to string conversion
+                                                2. string to Number conversion
 
 let age = 'true';
 console.log(typeof age); //string
@@ -120,14 +120,71 @@ console.log(typeof age); //number * The datatype would be converted to number he
 console.log(age);       // NaN     *string to number (i.e string that's not character would be not a number)*
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                                3. Number to Boolean conversion
+                                                3. Boolean to Number conversion
 
 let age = true;
 console.log(typeof age); //boolean
 age = Number(age);  *In Explicit conversion to convert Boolean datatype to number datatype the first letter in Number should be caps (i.e Number)*
 
 console.log(typeof age); //number * The datatype would be converted from boolean to number here now (i.e boolean to number)*
-console.log(age);       // NaN    * string to number (i.e string that's not character would be not a number)*
+console.log(age);       // 1    * Boolean to number *
 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                3. Null to Number conversion
 
+let age = null;
+console.log(typeof age); //object
+age = Number(age);  *In Explicit conversion to convert Null datatype to number datatype the first letter in Number should be caps (i.e Number)*
+
+console.log(typeof age); //number * The datatype would be converted from Null to number here now (i.e null to number)*
+console.log(age);       // 0    * Null to number *
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                4. Number to Boolean conversion
+
+let x =1;
+
+console.log(typeof x); //number
+
+x = Boolean(x); *In Explicit conversion to convert Number datatype to Boolean datatype the first letter in Boolean should be caps (i.e Boolean)*
+console.log(typeof x); //Boolean 
+console.log(x); //true
+
+                                * In Boolean only 0 => false. 1,-45 => True. Any Number except 0 is true. *
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                5. String to Boolean conversion
+
+                                                        Example 1
+
+let x = 'true';
+
+console.log(typeof x); //String
+
+x = Boolean(x); *In Explicit conversion to convert String datatype to Boolean datatype the first letter in Boolean should be caps (i.e Boolean)*
+console.log(typeof x); //Boolean 
+console.log(x); //true
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                5. String to Boolean conversion
+
+                                                        Example 2
+
+let x = 'false';
+
+console.log(typeof x); //String
+
+x = Boolean(x); *In Explicit conversion to convert String datatype to Boolean datatype the first letter in Boolean should be caps (i.e Boolean)*
+console.log(typeof x); //Boolean 
+console.log(x); //true
+
+*In string to boolean conversion ONLY ‘’ QUOTES IS FALSE other than that even the ' ' with space in between quotes is true. And any string in between '' is also true. *
+*
+'' => false,
+' ' => true,
+'false' => true,
+'0' => true.
+*
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
 
