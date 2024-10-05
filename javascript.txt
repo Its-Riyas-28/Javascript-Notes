@@ -178,7 +178,7 @@ x = Boolean(x); *In Explicit conversion to convert String datatype to Boolean da
 console.log(typeof x); //Boolean 
 console.log(x); //true
 
-*In string to boolean conversion ONLY ‘’ QUOTES IS FALSE other than that even the ' ' with space in between quotes is true. And any string in between '' is also true. *
+*In string to booean conversion ONLY ‘’ QUOTES IS FALSE other than that even the ' ' with space in between quotes is true. And any string in between '' is also true. *
 *
 '' => false,
 ' ' => true,
