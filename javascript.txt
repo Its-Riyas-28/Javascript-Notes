@@ -239,3 +239,114 @@ let a = b = c = 32;
 console.log(a,b,c); // 32 32 32
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                Modify in place
+
+let x = 5;
+x = x+5;    // * can be written as x += 5. works with all Operators like (+,-,*,/) *
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                Increment & Decrement Operators
+
+let x = 2;
+console.log(--x) //1 
+
+* 2 decreses to 1. Prefix Decrement*
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+let x = 2;
+console.log(x--) //2 
+console.log(x) //1
+ 
+* In post decrement x comes first so x is printed first. but it also performs -- . but when it prints x is only printed. * 
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                String Comparison
+
+let a = 'fide' 
+let b = 'tide'
+
+let result = a < b;
+console.log(result) // true
+
+* while comparing strings,
+                > It starts with comparing of first character of both a & b. 
+                > Now Comparison of a & b the first character f & t. t has larger uni code value. 
+                > Uni code value is similar to alphabeticale value (for understanding). Its used getting Values.
+                > f => 6, t => 20. so t value is larger.
+                > A comes first, then comes a. so a value is larger.
+                > Compares both strings by each character. (i.e: f & t, i & i, d & d, e & e). *
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                Example 2
+
+let a = 'tide' 
+let b = 'tid'
+
+let result = a > b;
+console.log(result); // true
+
+* a has a extra character so now a value is larger than b. As b has no value at all. *  
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                Comparison Of different datatypes
+
+let a = '1';
+let b = 1;
+
+let result = a == b;
+console.log(result); //true 
+
+* Comparison operators can perform comparing of different datatypes (i.e string, boolean to number)*
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                Strict equality
+
+=== => Strict equality
+==  => can perform type conversion. 
+so === is to Compare with its original datatype without type conversion.
+
+
+let a = '1';
+let b = 1;
+
+let result = a === b;
+console.log(result); //false
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        == vs ===
+
+== (Equality): Compares values after performing type conversion.
+=== (Strict Equality): Compares both value and type without conversion.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                Comparison of null and Undefined
+
+console.log(null == Undefined); // true 
+* There is a rule that says when you compare null with Undefined it is said to be true *
+
+console.log(null === Undefined); // false 
+*  It does not perform type conversion, so null and undefined are treated as different types,
+ which is why the result is false *
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                Comparison of null with Different Values
+
+With Boolean values:                                    |       With Numbers:
+                                                        |
+console.log(null === true);  // false                   |       console.log(null === 0);       // false
+console.log(null === false); // false                   |       console.log(null === 1);       // false
+                                                        |       console.log(null === NaN);     // false
+
+
+With Strings:                                           |       With Objects:
+                                                        |    
+console.log(null === '');       // false                |       console.log(null === {});       // false 
+console.log(null === 'null');   // false                |       console.log(null === []);       // false
+
+*
+[1] So the thing is apart from undefined when we compare null with any other value it is false. 
+[2] apart from null when we compare undefined with any other value it is false.
+*
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+
+
