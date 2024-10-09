@@ -295,7 +295,7 @@ let b = 1;
 let result = a == b;
 console.log(result); //true 
 
-* Comparison operators can perform comparing of different datatypes (i.e string, boolean to number)*
+* Comparison operators can perform comparing of different datatypes. And also it converts from one to another.(i.e string, boolean to number)*
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
                                                 Strict equality
@@ -313,10 +313,12 @@ console.log(result); //false
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
                                                         == vs ===
+##@@@ Important:
 
 == (Equality): Compares values after performing type conversion.
 === (Strict Equality): Compares both value and type without conversion.
 
+##@@@ 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
                                                 Comparison of null and Undefined
 
@@ -347,7 +349,86 @@ console.log(null === 'null');   // false                |       console.log(null
 [2] apart from null when we compare undefined with any other value it is false.
 *
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                Comparison of null with <,>,<=,>=
 
 
+console.log(null <= 0); //true  * Its because null is converted into 0 while using <=. so 0 <=0 is true*
+console.log(null < 0); //false  * because 0 is not less than 0
+console.log(null == 0); //false * As discused in previous topic when you compare anything apart from undefined with null is false.
 
+##@@@ Important: WHEN CONVERTING NULL TO NUMBER IT CONVERTS TO 0. AND WHEN CONVERTING UNDEFINED TO NUMBER IT CONVERTS TO NaN @@@##
 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        If Statement
+
+if(true){
+        console.log("Vamos");
+}
+
+* If true is given as expression then without second thought the Statement would passed. It is called Truthy Statement. *
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        Logical Operator
+
+OR ||
+
+  A   B   O
+_____________
+                                        Remember as kind hearted. even if there is one 1 its 1.
+  1    1    1
+  1    0    1
+  0    1    1
+  0    0    0
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+AND &
+
+A   B   O
+_____________
+                                        Remember as kind Strict guy. even if there is one 0 its 0.
+  1    1    1
+  1    0    0
+  0    1    0
+  0    0    0
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+NOT !
+
+      A   O
+  _____________
+      1   0                               Exact Opposite. Returns in boolean t/f
+      0   1
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        Short Circuit
+OR                                                      
+
+console.log(1 || 0)     //1
+console.log(0 || 0)     //0                    >It stops it evalution when it sees the true(i.e 1 or anything)
+console.log(12 || 0)    //12                   >Returns in number.
+console.log(0 || 1)     //1                    >If first input is not  false then it prints whatever it has in first position.
+console.log(2 || 10)    //2
+
+console.log(null || 0 ||Undefined) //undefined  *because it doesn't have true value in it*
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+AND
+
+console.log(1 && 0)     //0
+console.log(121 && 0 && 12)     //0            >It stops it evalution when it sees the false(i.e 0). And returns 0.
+console.log(54 && 555)   //555                 >Returns in number. Not in t/f
+console.log(0 && 54)    //0                    >Runs the complete Statement and then if the Statement has false in it. It would return false.
+console.log(21 && 1)    //1                    >Since both values are truthy, the && operator returns the second value, which is 1.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        Null coalescing
+
+let age = null;
+let current_age = age ??19;
+console.log(current_age); //19
+
+*If initially its null then if you want to change then you can use null coalescing. 
+But if the identifieris has a declared variable then null coalescing will not work*
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
