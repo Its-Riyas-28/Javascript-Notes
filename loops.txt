@@ -7,6 +7,6 @@ When to Use a for Loop:
 
 When to Use a while Loop:
 >Unknown number of iterations.
->Use a while loop when you don't know exactly how many times you need to loop but you want to continue as long as a certain condition is true.
+>Use a while loop when you don't knw exactly how many times you need to loop but you want to continue as long as a certain condition is true.
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
