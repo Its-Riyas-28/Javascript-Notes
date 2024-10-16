@@ -1,0 +1,104 @@
+                                                        FUNCTION
+
+Main advantage of the Functions are you can use it for numerous times. Resuabilty. It only runs when it is being called.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        FUNCTION DECLARATION
+
+ let a=12; b=24
+ 
+ function opera(var1,var2){                                 //var1,var2 is called parameters
+        console.log((var1+var2)**var2)                      // opera is called identifier  
+ }
+
+                                    /* If i execute till this it wont execute as it doesn't execute.
+                                    As it has no function calling */
+
+opera(5, 10);                                                // this is called function calling. within that arguments is passed.
+
+                                                            //5 is passed as the argument for var1
+                                                            //10 is passed as the argument for var2.
+
+opera(9); //NaN                     if we give only argument then it takes another one as undefined.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        DEFAULT VALUES FOR FUNCTION PARAMETERS
+
+let a=12; b=24
+ 
+ function opera(var1=3,var2){                   
+        console.log((var1+var2)**var2)                
+ }
+
+opera(2) 
+
+/*if i give default values but for only 1st parameter then it is print NaN.
+In default opera(2) will be considered as argument for 1st parameter. 
+so in the place of 3 its value is 2 now. 
+
+if you are giving default value always give values for second parameter.
+*/
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        SCOPES
+
+                                          There are two types of scopes
+
+                                          1. Local             2. Global
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-                                          
+
+Local Scope :
+
+function opera() {
+    var localboy = "baby shark";
+    console.log(localboy);                // It works
+}
+
+opera();                                          // Output: "baby shark"
+
+                     /* It works fine within the function. if it called outside function it makes error. */
+
+console.log(localboy); //localboy not defined
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+Global Scope :
+
+var localboy;                                     //Globally Declared
+
+function opera() {
+       localboy = "baby shark";
+       console.log(localboy); 
+}
+
+opera();                                         
+console.log(localboy); 
+
+/* >if i declare var in top it means i can call it any where and it still runs.
+   >if i declare var again in within the function it makes undefined error.
+
+                            function opera() {
+                                          var localboy = "baby shark";
+                                          console.log(localboy); 
+                            }
+
+                            opera();
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                               RETURN
+
+var localboy;
+function opera() {
+       localboy = "baby shark";
+     return localboy;
+}
+
+console.log(opera()); 
+
+/* >Returns a value that can be stored and reused. This allows for various manipulations and transformations. 
+   >You can resuse with its function name wherever i want.
+   >But while consoling it is not possible to reuse with function identifer.
+   >Would not process the next line of the code. so it needs to be in end. */
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-

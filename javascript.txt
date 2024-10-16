@@ -432,3 +432,22 @@ console.log(current_age); //19
 But if the identifieris has a declared variable then null coalescing will not work*
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        WHILE LOOP VS FOR LOOP
+
+When to Use a for Loop: 
+
+>Fixed or known number of iterations. //n<5
+>If you know beforehand how many times you need to repeat a block of code (e.g., iterating over an array, counting from 1 to 10), a for loop is ideal.
+
+When to Use a while Loop:
+>Unknown number of iterations.
+>Use a while loop when you don't know exactly how many times you need to loop but you want to continue as long as a certain condition is true.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        Jump Statement
+
+break : to stop the loop iteration at one point.
+
+continue : skip
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
