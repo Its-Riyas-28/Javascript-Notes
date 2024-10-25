@@ -85,20 +85,19 @@ h1 {
     opacity: .75; 
 }
 
-.row h2{
+.three-col{
+    padding: 3em 0;
+}
+
+.three-col h2{
+    text-align: center;
     color:#87629A;
     
 }
 
-.footer{
-    display: flex;
-    background-color: #136C72;
-    width:100%;
-    
-}
-
-.footer .col{
-    width:40%;
-    margin: 0 auto;
-    padding-left: 10px;
+.two-col{
+    text-align: center;
+    padding: 3em 0;
+    background-color:#136c72;
+    color:whitesmoke
 }
