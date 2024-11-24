@@ -1,0 +1,189 @@
+
+                                                               OBJECT
+
+let x ={};                          //object /*Declaration of object*/
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+
+let car = {
+    name:'porsche 911',
+    brand:'porsche',
+    driveTrain:'petrol,diesel,ev',     |    driveTrain:hi    //it will display error because all values should be some datatype. 
+    price: 45
+};
+
+console.log(car.name)               //porsche 911
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+let engineOptions = 'petrol,diesel'
+
+let car = {
+    name:'porsche 911',
+    brand:'porsche',
+    driveTrain: engineOptions+ ',ev',   //javascript allows to work like this.
+    price: 45
+};
+
+console.log(car.driveTrain);  
+
+/* In key you can use words with space. but needs to be in "".
+eg: "drive Train" : engineOptions+ ',ev',
+
+when consoling it needs to be like console.log(car["drive Train"]); */
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                    deleting property in object
+
+let engineOptions = 'petrol,diesel'
+
+let car = {
+    name:'porsche 911',
+    brand:'porsche',
+    driveTrain: engineOptions+ ',ev',   //javascript allows to work like this.
+    price: 45
+};
+
+delete car.price;
+console.log(car);                       //except car price everything is there.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                    Adding & updating new property  in object
+
+let engineOptions = 'petrol,diesel'
+
+let car = {
+    name:'porsche 911',
+    brand:'porsche',
+    driveTrain: engineOptions+ ',ev',   
+    price: 45
+};
+
+car['modelYear'] = 2013;                //quotes is must for adding new property.
+
+                            or
+car.modelYear = 2013;
+car.price = 18;                          //Adding & updating the property
+
+console.log(car);                       // now prints modelYear : 2013
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+                                                placing function in object(method)
+
+let engineOptions = 'petrol,diesel'
+
+let car = {
+    name:'porsche 911',
+    brand:'porsche',
+    driveTrain: engineOptions+ ',ev',   
+    price: 45, 
+    onRoadprice(price){                 //function
+        return this.price+2;            //this keyword is taking the current object price.
+    }
+};                                      //if this is not used output would be 13 as it passest through parameters.
+
+car.price = 18;
+console.log(car.onRoadprice(11));       //20 if this keyword is used
+
+/* this keyword refers to the object that is currently executing the code. Its value depends on how the function is called. */
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+                                        In Operator
+
+let user = {
+    name : 'goml',
+    age:25,
+};
+
+console.log('age' in user); //true  /* using '' is must for correct way 
+
+//In keyword checks for age property in user object 
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                        FOR Using IN
+
+let user = {
+    name : 'goml',
+    age:25,
+    height:5.7,
+};
+
+for(key in user){               //prints only key because of IN operator.     
+    console.log(key);           //if you want to display value then console.log(user[key]);
+}
+
+//name
+//age
+//height
+
+                            usage of console.log(user[key]);
+let user = {
+    name : 'goml',
+    age:25,
+    height:5.7,
+};
+
+for(key in user){                    
+    console.log(key);           
+}
+
+console.log(key +'-'+ user[key]);       //user[key] accesses user["name"], which is 'goml'
+
+//name - goml
+//age - 25
+//height - 5.7
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                            Reference in object
+
+let a = {                                           /* objects are reference types, meaning that when an object is assigned to another variable (let b = a;), 
+    name: 'goms',                                      both variables point to the same memory location.
+    age: 23,                                           As a result, if one reference makes any changes to the object, 
+                                                       those changes are reflected across all references that point to the same object.
+                                                       This is because all references are essentially accessing the same 'core' object in memory."
+};
+let b = a;                                              D:\javascript Notes\reference example
+
+console.log(a, b);                                     //If either one of them make changes it will be affect the core.
+
+b.age = 75;
+console.log(a, b);                                              D:\javascript Notes\referenceObject.webp
+
+/*{ name: 'goms', age: 23 } { name: 'goms', age: 23 }
+{ name: 'goms', age: 75 } { name: 'goms', age: 75 } */              //75 is changed in A also
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                        const usage in object
+const a = {
+    name: 'goms',
+    age: 23,
+};
+
+a={};                           // Reassigning the object is NOT allowed:
+console.log(a);                 // TypeError because total object is considered as single variable.
+
+but we can change properties,
+
+a.name='boma';                  // Modifying properties of the object is allowed:
+console.log(a);
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                    Garbage collection
+
+let a = {
+    name: 'goms',               //this object will be stored in one address
+    age: 23,
+};
+
+
+console.log(a);                 
+a= null;                       //as it is updated to null. it cleares the old address memory
+
+console.log(a);
+
+/* True: Setting a = null removes the reference to the object, and it becomes eligible for garbage collection.
+Not Immediate: The object is not immediately removed from memory,
+                as garbage collection is an automatic background process that happens at some point later.*/
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-

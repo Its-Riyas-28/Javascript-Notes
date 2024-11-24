@@ -1,0 +1,75 @@
+                                        Constructor in JavaScript
+
+function Riyas(){     // this is Constructor. 
+                            difference from itself and function is its function name starts with capital letter.
+
+}      
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+let a = {
+    name : 'riyas',             //object
+}
+
+function User(){
+    this.name = 'riyas'         // this is Constructor. and it cannot store properties like object.
+}                              //  this keyword is needed
+
+let riyas = new User();         //assignin Constructor to new variable.
+
+console.log(riyas);
+
+/* 
+    >new is needed for to mention Constructor. it is not mandytory but it is conviction.
+    >new is for mentioning new object.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                multiple object with help of Constructor
+let a = {
+    name: 'goms',
+};
+
+function User(a) {
+    // this = {};
+    this.name = a;
+    // return this;
+}
+
+
+let goms = new User('goms');        //can create multiple object with help of Constructor. 
+let siva = new User('siva');
+
+console.log(goms, siva);    //User { name: 'goms' } User { name: 'siva' }
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                Using function within Constructor as variable
+let a = {
+    name: 'goms',
+};
+
+function User(a) {
+    this.name = a;
+    this.age = function(){
+        return 23;
+    }
+}
+
+let goms = new User('goms');
+let siva = new User('siva');
+
+console.log(goms, siva);    //User { name: 'goms', age: [Function (anonymous)] } 
+                              User { name: 'siva', age: [Function (anonymous)] }
+
+/* You can't get all details from logging single variable (console.log(goms, siva);).
+As it uses function within as variable. */ 
+
+
+If you want all details then,
+
+let goms = new Babu('goms');
+let siva = new Babu('siva');
+
+console.log({ name: goms.name, age: goms.age() });  //{ name: 'goms', age: 23 }
+console.log({ name: siva.name, age: siva.age() });  //{ name: 'siva', age: 23 }
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-

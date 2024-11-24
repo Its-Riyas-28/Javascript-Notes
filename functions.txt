@@ -8,7 +8,7 @@ Main advantage of the Functions are you can use it for numerous times. Resuabilt
  let a=12; b=24
  
  function opera(var1,var2){                                 //var1,var2 is called parameters
-        console.log((var1+var2)**var2)                      // opera is called identifier  
+        console.log((var1+var2)**var2)                      // opera is called function name  
  }
 
                                     /* If i execute till this it wont execute as it doesn't execute.
@@ -69,11 +69,11 @@ var localboy;                                     //Globally Declared
 
 function opera() {
        localboy = "baby shark";
-       console.log(localboy); 
+       console.log(localboy);                    //baby shark
 }
 
 opera();                                         
-console.log(localboy); 
+console.log(localboy);                           //baby shark
 
 /* >if i declare var in top it means i can call it any where and it still runs.
    >if i declare var again in within the function it makes undefined error.
@@ -96,9 +96,56 @@ function opera() {
 
 console.log(opera()); 
 
-/* >Returns a value that can be stored and reused. This allows for various manipulations and transformations. 
+/* >It is like conformation. when you use return it will something. meaning this function works and this return something as conformation.
+   >Executes output. without you have to be consoling it manually.
+   >Returns a value that can be stored and reused. This allows for various manipulations and transformations. 
    >You can resuse with its function name wherever i want.
    >But while consoling it is not possible to reuse with function identifer.
    >Would not process the next line of the code. so it needs to be in end. */
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+                                                               ASSIGNING A FUNCTION TO A VARIABLE
+
+function oddEven(a) {
+    if (a % 2 === 0) {
+        return "Even";
+    }
+    return "Odd";
+}
+
+let oddOrEven = oddEven;                  //We are just adding this line to assignin variable. With this we can just call it anywhere.
+
+console.log(oddOrEven(3)); 
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=- 
+
+                                                               Instead of that we can also do this
+
+let oddOrEven = function (a) {             |            let oddOrEven = (a) => {                                
+    if (a % 2 === 0) {                     |                    if (a % 2 === 0) {  
+        return "Even";                     |                        return "Even";          /* Known as Arrow function or Nameless function 
+    }                                      |                   }                                         as because we use variableto declare. */
+    return "Odd";                          |                   return "Odd";
+}                                          |             }
+                                           |
+console.log(oddOrEven(3));                 |            console.log(oddOrEven(3));
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                                function callback
+function operation(op, a, b) {
+    return op(a, b);
+}
+
+let add = (a, b) => a + b;                           //This is also a function 
+
+function sub(a, b) {                               // function passed as a parameter to another function is called function callback
+    return a - b;
+}
+
+console.log(operation(sub, 2, 3));               //In parameters it can take function, variable, values... can be given.
+
+/*whichever function im giving as a parameter. it will perform the operation with next parameters to it.
+Here its sub */
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-                                                      

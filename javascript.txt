@@ -215,7 +215,9 @@ let y = -2 * -2; // Now y is 4 (negative times negative).
 Unary : 
 
 let x = -2;
-x = -x; // Now x is 2 (negation)
+x = -x; // Now x is 2 (This is called negation. means 
+Positive to negative (+5 becomes -5). 
+Negative to positive (-3 becomes +3). negation flips the truth value)
 
 *
 
@@ -226,6 +228,8 @@ x = -x; // Now x is 2 (negation)
 let a = '10' , b = '12'; //String
 let sum = +a + +b;  // * +a +b is Unary Operator. Now it converts String to Number * 
 console.log(sum) // 22
+
+// let sum = Number(a) + Number(b); instead of this let sum = +a + +b;  can be used 
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
                                                 Binary Operator

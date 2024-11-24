@@ -1,0 +1,87 @@
+                                        ARRAY
+
+let arr = new Array();      //creation of Array
+
+console.log(typeof(arr));    //object
+
+/* Array is an object */
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                        Possible ways of creating an array
+                                        
+let arr = new Array();          |       let arr = [];            | let arr = ['indian','robo']; 
+arr = ['indian','robo'];        
+
+console.log(arr);           //['indian','robo']         /*calling array*/
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                        Accessing Array
+
+let arr = ['indian','robo']; 
+arr = ['indian','robo'];                    //indexing starts from zero                                         
+
+console.log(arr[0]);                        //indian
+
+/* 
+Array can store different datatypes Even object, null, undefined,function 
+*/
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                           Adding an array                             
+
+let arr = ['indian','robo']; 
+arr[2] = 'rayan';    
+
+console.log(arr[2]);                //rayan
+
+                                    or
+
+let arr = ['indian','robo']; 
+
+arr.push('rayan');                  //push is like adding an elements atlast
+arr.unshift('rayan');               //pushing infront
+
+console.log(arr);  
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                           Deleting an array
+
+let arr = ['indian','robo'];
+
+arr.pop();                          //pop will delete the last element    
+arr.shift();                        //shift will delete the first element
+
+console.log(arr.pop());             //robo          /*can check what is being poped
+console.log(arr);                   //['indian']
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                            To access complete array for loop can be used
+
+let arr = ['indian','robo'];
+
+for(music of arr){                  // of used for accessing elements in array
+    console.log(music)              //indian robo
+}
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                    usage of IN operator(Not recommeded "of is better")
+
+let arr = ['indian','robo'];
+
+for(music in arr){                  // IN operator in array only returns index values
+    console.log(music);              //0 1
+
+    /* to console as elements
+    
+    console.log(arr[music]);        //indian robo
+    */
+}
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                    Length in array
+
+let fruits = ['mango','banana','jackfruit'];
+
+console.log(fruits.length);         //3 
+
+/* Length prints as number system */
