@@ -1,0 +1,41 @@
+Hoisting:
+
+Hoisting means JavaScript moves variable and function declarations to the top of the code before running it.
+
+Types of Hoisting:
+
+Variable Hoisting
+Function Hoisting
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                        Variable Hoisting (with var):
+
+console.log(a);             // undefined (declaration is hoisted, but initialization is not)
+var a = 10;                 // Initialization happens here
+console.log(a);             // 10
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                        What Happens If You Don’t Use Any Variable Declaration?
+
+channel = 'yt'; 
+console.log(channel);        // yt
+
+/*      >If no variable declaration (var, let, or const) is used, JavaScript creates an implicit global variable 
+            (only in non-strict mode).
+        >This variable becomes a property of the global object
+        >In strict mode ('use strict';), this will throw a ReferenceError.
+        >It does not automatically assume var as the default. Instead, it creates an implicit global variable (which is considered bad practice).
+        
+*/
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                        let and const are also can be hoisted
+
+Variables declared with let and const are also hoisted, but they are not initialized until their declaration is evaluated.
+
+console.log(b) // ReferenceError: Cannot access 'b' before initialization
+let b = 20
+console.log(b) // 20
+
+In this example, let b; is hoisted, but accessing b before its declaration results in a ReferenceError.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-

@@ -11,7 +11,7 @@ Main advantage of the Functions are you can use it for numerous times. Resuabilt
         console.log((var1+var2)**var2)                      // opera is called function name  
  }
 
-                                    /* If i execute till this it wont execute as it doesn't execute.
+                                    /* If i execute till this it wont execute as it doesn't execute at this stage.
                                     As it has no function calling */
 
 opera(5, 10);                                                // this is called function calling. within that arguments is passed.

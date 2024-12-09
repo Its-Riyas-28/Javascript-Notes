@@ -5,6 +5,7 @@ function Riyas(){     // this is Constructor.
 
 }      
 
+/* mainly used for having/creating multiple object */
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
 
 let a = {
@@ -12,7 +13,7 @@ let a = {
 }
 
 function User(){
-    this.name = 'riyas'         // this is Constructor. and it cannot store properties like object.
+    this.name = 'riyas'         // this is Constructor. and it cannot store properties like object(name : 'riyas',).
 }                              //  this keyword is needed
 
 let riyas = new User();         //assignin Constructor to new variable.
@@ -66,8 +67,8 @@ As it uses function within as variable. */
 
 If you want all details then,
 
-let goms = new Babu('goms');
-let siva = new Babu('siva');
+let goms = new User('goms');
+let siva = new User('siva');
 
 console.log({ name: goms.name, age: goms.age() });  //{ name: 'goms', age: 23 }
 console.log({ name: siva.name, age: siva.age() });  //{ name: 'siva', age: 23 }

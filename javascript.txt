@@ -6,11 +6,17 @@ let varun = 29; // Varun is identifier
                                             NaN USES
 NaN = Not a Number
 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+                                             dir() USES
+                                             
+console.dir()   /*is used to display an object in a detailed and interactive way, 
+so you can explore its properties and methods.*/
+
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
                                             NaN USES
 NaN + 2 // anything added to nan is also NaN.  
 only except NaN ** 0 its like power operator its output will be 1. 
-NaN + 2 will also be NaN. 
+NaN ** 2 will also be NaN. 
 Its only applicable for  NaN ** 0 b'cuz anything to the power 0 is 1. It works the same here.
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

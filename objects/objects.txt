@@ -1,4 +1,23 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                               Everything in javascript is an object but not Primitives.
 
+Null is a primitive data type.
+However, typeof null incorrectly returns "object". This is a bug in JavaScript that exists for legacy reasons.
+
+
+let a = null;        // Explicitly set to "no value"
+let b;               // Variable declared but not assigned (undefined)
+
+console.log(a);      // null
+console.log(b);      // undefined
+
+console.log(typeof a); // "object" (weird legacy bug)
+console.log(typeof b); // "undefined"
+
+/*Almost everything in JavaScript behaves like an object and can have properties and methods.
+Primitives are exceptions, but they are temporarily treated like objects when needed.*/
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
                                                                OBJECT
 
 let x ={};                          //object /*Declaration of object*/
