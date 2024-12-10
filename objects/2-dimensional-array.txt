@@ -1,0 +1,46 @@
+let mat = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+console.log(mat[0][2]); //3
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        printing all the numbers in 2 dimensional array
+let mat = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+for (let i = 0; i < mat.length; i++) {                  OUTPUT
+    for (let j = 0; j < mat[i].length; j++) {           // 1
+    console.log(mat[i][j]);                                2
+}}                                                         3            
+                                                           4
+/*
+Outer Loop (rows):                                         5
+i = 0 -> Current row is [1, 2, 3].                         6
+i = 1 -> Current row is [4, 5, 6].                         7 
+i = 2 -> Current row is [7, 8, 9].                         8
+                                                           9
+Inner Loop (columns):                                      
+
+For i = 0 (row [1, 2, 3]):
+j = 0 -> Print mat[0][0] -> 1.
+j = 1 -> Print mat[0][1] -> 2.
+j = 2 -> Print mat[0][2] -> 3.
+
+For i = 1 (row [4, 5, 6]):
+
+j = 0 -> Print mat[1][0] -> 4.
+j = 1 -> Print mat[1][1] -> 5.
+j = 2 -> Print mat[1][2] -> 6.
+
+For i = 2 (row [7, 8, 9]):
+j = 0 -> Print mat[2][0] -> 7.
+j = 1 -> Print mat[2][1] -> 8.
+j = 2 -> Print mat[2][2] -> 9.
+
+*/
