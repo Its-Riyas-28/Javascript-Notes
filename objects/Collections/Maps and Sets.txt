@@ -1,0 +1,43 @@
+                                        MAP AND SETS
+
+let map = new Map();                //creation of map
+
+map.set(1, 'code io');              //declaration of map. It is same like object(Key-value pair) 
+map.set(2, 'logic io');                 but here it uses , and strings. 
+
+console.log(map);       //Map(2) { 1 => 'code io', 2 => 'logic io' }            
+                        //2 is used to declare how many elements in this map. here it is 2
+
+/* 
+    1 is like key
+    code io is value
+    
+*/
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                (☝️ can be written like 👇)
+let map = new Map(); 
+
+map.set(1, 'code io')                   // notice that at the end of the line it doesnt have ;. if i include ; it would show error
+   .set(2, 'logic io'); 
+
+console.log(map);                       //Map(2) { 1 => 'code io', 2 => 'logic io' } 
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                        .set(),.get(),.has().delete(),.clear()  methods of map
+let map = new Map(); 
+
+map.set(1, 'code io')                   
+   .set(2, 'logic io'); 
+
+console.log(map.get(2));                //logic io
+
+console.log(map.has(2));                //true          checks whether 2 has value or not . if so it is resulted in output 
+
+map.delete(2);
+console.log(map);                       //Map(1) { 1 => 'code io' }
+
+console.log(map.clear());               // cleared
+
+console.log(map.size);                  // 3 If we give map.size() inside console.log it makes error.
+                                            because its a property not a function.
