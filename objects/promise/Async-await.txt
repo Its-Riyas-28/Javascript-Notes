@@ -1,0 +1,94 @@
+                                            ASYNC-AWAIT (Cyber Dude Network: 52:40 - )
+
+const Delivery = new Promise((resolve,reject) =>{                  
+                                                   
+    let Order=true;                                                  
+                                                   
+    if(Order){                                     
+        resolve("Order Placed");                
+    }
+    else{
+        reject("Order Not Placed");                             
+    }
+})
+                                                                        Instead. It's the beauty of await 
+Delivery                                            |
+    .then((messege)=>{                              |               
+        console.log(messege);                       |
+    })                                              |               console.log(await Delivery);
+    .catch((rejected)=>{                            |                   
+        console.log("Error:",rejected);             |               //await just doesnt need then,catch to process inbetween setTimeout.
+    })                                              |                   
+    .finally(()=>{                                  |              //It is a bad Practice. await should always comes under function.
+        console.log("Visit Again");                 |
+    })                                              |              //Await => It will wait for promise to complete.
+                                                    |
+console.log(Delivery);                              |
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+const Delivery = new Promise((resolve,reject) =>{                  
+                                                   
+    let Order=false;                                                  
+                                                   
+    if(Order){                                     
+        resolve("Order Placed");                
+    }
+    else{
+        
+        reject("Order Not Placed");                             
+    }
+})
+    
+async function getDelivery(){                               //await should always comes under async function. If not it will return error.
+    const result = await Delivery;
+
+    console.log(result);                                   //Uncaught (in promise) Order Not Placed
+}
+    
+getDelivery();
+
+
+                                                        With Arrow Function,
+   
+const getDelivery = async () => {                               
+    const result = await Delivery;
+
+    console.log(result);
+}
+    
+getDelivery();
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        TRY AND CATCH
+
+As you know it is giving the clear output.[Uncaught (in promise) Order Not Placed]  
+
+const Delivery = new Promise((resolve, reject) => {
+
+    let Order = false;
+
+    if (Order) {
+        resolve("Order Placed");
+    } else {
+        reject("Order Not Placed");                                         //await doesnt require setTimeout.
+    }
+});
+
+async function getDelivery() {
+    try {
+        const result = await Delivery;
+        console.log(result);
+
+    }
+    
+    catch (error) {
+
+        console.log("Sorry", error);
+    }
+
+}
+
+getDelivery();          //Sorry Order Not Placed
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-

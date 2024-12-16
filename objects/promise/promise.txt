@@ -1,0 +1,109 @@
+                                        PROMISE (Cyber Dude Network: 31:54 - 52:30)
+                                        
+> Promise is like promising the output. 
+> It can negative or positive result. 
+> but it always returns result.
+
+        A JavaScript Promise represents a value that may be available now, or in the future, or never. 
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                        WORKFLOW OF PROMISE
+
+STAGE 1
+
+const Delivery = new promise((resolve,reject) =>{                  //resolve,reject is callback. as it is function called as parameters.
+
+    const Order = true;
+
+    if(Order){
+        resolve("Order Placed");                //resolve happens when it is true
+    }
+    else{
+        reject("");                             //reject happens when it is false
+    }
+})
+
+console.log(Delivery);
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+STAGE 2
+
+const Delivery = new Promise((resolve,reject) =>{                  
+
+    let Order;                                                    //const changed to let. now when you console it.
+                                                                    
+
+    /* Asyncornous function */
+
+    setTimeout(()=>{                                              /* > this setTimeout process takes time to execute
+        Order = true;                                                > takes 3s to execute */
+    },3000)                                                        
+
+    if(Order){
+        resolve("Order Placed");                
+    }
+    else{
+        reject("Order Not Placed");                             
+    }
+})
+
+console.log(Delivery);   //Promise { <rejected> '' }
+
+
+
+/*
+    WHEN YOU CONSOLE IT 
+
+                    >let "order"  (it gives undefined as output).
+                    >Even if it is true. "setTimeout" takes 3s to execute.
+                    >Now it goes to if else statement. but it doesnt have statement to process. so it is rejected.
+    */
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                        HANDLING THE STAGE 2 PROBLEM
+
+STAGE 3
+
+const Delivery = new Promise((resolve,reject) =>{                  
+
+    let Order=true;                                                  
+
+    if(Order){
+        resolve("Order Placed");                
+    }
+    else{
+        reject("Order Not Placed");                             
+    }
+})
+
+Delivery
+    .then((messege)=>{
+        console.log(messege);               //resolve                   /*This is called chaining fuction. as it starts with '.' directly.
+    })
+    .catch((rejected)=>{
+        console.log("Error:",rejected);       //reject
+    })
+    .finally(()=>{
+        console.log("Visit Again");
+    })
+
+console.log(Delivery);      
+console.log("Loading...");                      // what happens is this promise
+
+
+//Promise { <pending> }
+Loading...
+Order Placed
+Visit Again
+
+
+//if false:
+
+Promise { <pending> }
+Loading...
+Error: Order Not Placed
+Visit Again
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
