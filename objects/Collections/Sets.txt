@@ -1,3 +1,22 @@
                                              SETS
 
-                                             
+Set is also an object. And can't add duplicates. 
+It doesn't store values in key-value pair.
+size,.has().delete(),.clear() works same like MAP.
+.get() won't work because here only values. 
+example: console.log(map.get(2));                //logic io
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                             CREATION OF SETS
+let set = new set();
+
+set.add('code io') ;                  //this works same like map.set()
+console.log(set);           //set(1) {'code io'}
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                             DUPLICATE SET
+let set = new set();
+
+set.add('code io') ; 
+    .add('code io') ;                 //this won't work . as its a duplicate set. only stores unique values
+console.log(set);
