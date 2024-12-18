@@ -1,4 +1,4 @@
-                                        Constructor in JavaScript
+                                            Constructor in JavaScript
 
 function Riyas(){     // this is Constructor. 
                             difference from itself and function is its function name starts with capital letter.
@@ -25,7 +25,7 @@ console.log(riyas);
     >new is for mentioning new object.
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                                multiple object with help of Constructor
+                                            multiple object with help of Constructor
 let a = {
     name: 'goms',
 };
@@ -43,7 +43,7 @@ let siva = new User('siva');
 console.log(goms, siva);    //User { name: 'goms' } User { name: 'siva' }
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                                Using function within Constructor as variable
+                                            Using function within Constructor as variable
 let a = {
     name: 'goms',
 };

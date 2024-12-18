@@ -1,4 +1,4 @@
-                                        ARRAY
+                                             ARRAY
 
 let arr = new Array();      //creation of Array
 
@@ -7,7 +7,7 @@ console.log(typeof(arr));    //object
 /* Array is an object */
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                        Possible ways of creating an array
+                                             Possible ways of creating an array
                                         
 let arr = new Array();          |       let arr = [];            | let arr = ['indian','robo']; 
 arr = ['indian','robo'];        
@@ -15,7 +15,7 @@ arr = ['indian','robo'];
 console.log(arr);           //['indian','robo']         /*calling array*/
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                        Accessing Array
+                                             Accessing Array
 
 let arr = ['indian','robo']; 
 arr = ['indian','robo'];                    //indexing starts from zero                                         
@@ -27,7 +27,7 @@ Array can store different datatypes Even object, null, undefined,function
 */
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                           Adding an array                             
+                                             Adding an array                             
 
 let arr = ['indian','robo']; 
 arr[2] = 'rayan';    
@@ -44,7 +44,7 @@ arr.unshift('rayan');               //pushing infront
 console.log(arr);  
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                           Deleting an array
+                                             Deleting an array
 
 let arr = ['indian','robo'];
 
@@ -55,7 +55,7 @@ console.log(arr.pop());             //robo          /*can check what is being po
 console.log(arr);                   //['indian']
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                            To access complete array for loop can be used
+                                             To access complete array for loop can be used
 
 let arr = ['indian','robo'];
 
@@ -64,7 +64,7 @@ for(music of arr){                  // of used for accessing elements in array
 }
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                    usage of IN operator(Not recommeded "of is better")
+                                             usage of IN operator(Not recommeded "of is better")
 
 let arr = ['indian','robo'];
 
@@ -78,7 +78,7 @@ for(music in arr){                  // IN operator in array only returns index v
 }
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                    Length in array
+                                             Length in array
 
 let fruits = ['mango','banana','jackfruit'];
 

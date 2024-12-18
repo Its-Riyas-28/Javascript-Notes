@@ -1,4 +1,4 @@
-                                        MAP AND SETS
+                                             MAP
 
 let map = new Map();                //creation of map
 
@@ -15,16 +15,16 @@ console.log(map);       //Map(2) { 1 => 'code io', 2 => 'logic io' }
 */
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                                (☝️ can be written like 👇)
+                                             (☝️ can be written like 👇)
 let map = new Map(); 
 
-map.set(1, 'code io')                   // notice that at the end of the line it doesnt have ;. if i include ; it would show error
+map.set(1, 'code io')                   // notice that at the end of the line it doesnt have ;. if we include ; it would show error
    .set(2, 'logic io'); 
 
 console.log(map);                       //Map(2) { 1 => 'code io', 2 => 'logic io' } 
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
-                                        .set(),.get(),.has().delete(),.clear()  methods of map
+                                             .set(),.get(),.has().delete(),.clear()  methods of map
 let map = new Map(); 
 
 map.set(1, 'code io')                   
@@ -39,5 +39,27 @@ console.log(map);                       //Map(1) { 1 => 'code io' }
 
 console.log(map.clear());               // cleared
 
-console.log(map.size);                  // 3 If we give map.size() inside console.log it makes error.
+console.log(map.size);                  // 2 If we give map.size() inside console.log it makes error.
                                             because its a property not a function.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                             ITERATION PROCESS
+
+let map = new Map();
+
+map.set('ch1', 'code io')
+   .set(2, 'logic io')
+   .set(3, 'undefined');
+
+for (key of map.values()) {         //for (key of map()) {} with this you can iterate completly 
+    console.log(key);              //for (key of map.keys()) with this you can iterate keys
+}
+
+//OUTPUT
+
+code io
+logic io
+undefined
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+

@@ -1,0 +1,111 @@
+                                                        FETCH API
+
+By Default fetch api uses GET method.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        FETCH API RESPONSE
+
+fetch("https://reqres.in/api/users/2").then((res)=>{
+    console.log(res);
+})                                                              //When you just console the arrow function. it returns body, header.
+
+
+
+// OUTPUT
+
+Response {
+  type: "cors",
+  url: "https://reqres.in/api/users/2",
+  redirected: false,
+  status: 200,
+  ok: true,
+  statusText: "OK",
+  headers: Headers,
+  body: ReadableStream,
+  bodyUsed: false
+}
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        IF YOU WANT THE DATA
+
+fetch("https://reqres.in/api/users/2").then((res)=>{
+    console.log(res.json());                                            //.json returns promise
+})                                           
+
+// OUTPUT
+
+Promise { <pending> }
+
+{
+  "data": {
+    "id": 2,
+    "email": "janet.weaver@reqres.in",
+    "first_name": "Janet",
+    "last_name": "Weaver",
+    "avatar": "https://reqres.in/img/faces/2-image.jpg"
+  },
+  "support": {
+    "url": "https://reqres.in/#support-heading",
+    "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+  }
+}
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        DATA EXTRACTION FROM API. NO BULLSHIT
+
+
+                                                                    Instead
+fetch('https://reqres.in/api/users/2').then((res) => {                  |       fetch("https://reqres.in/api/users/2")
+    return res.json();                                                  |           .then((res) => res.json())                  //just removed {}
+}).then((data) => {                                                     |           .then((data) => {
+    console.log(data);                                                  |               console.log(data);
+});                                                                     |            });                              
+
+//OUTPUT
+
+{
+  "data": {
+    "id": 2,
+    "email": "janet.weaver@reqres.in",
+    "first_name": "Janet",
+    "last_name": "Weaver",
+    "avatar": "https://reqres.in/img/faces/2-image.jpg"
+  },
+  "support": {
+    "url": "https://reqres.in/#support-heading",
+    "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+  }
+}
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                             VALID URL BUT RESOURCE NOT FOUND                                                          
+
+fetch("https://reqres.in/api/users/2")
+
+.then((res)=>{
+
+    if(!res.ok){                                // Check for HTTP errors .even if we cant locate resource. it should not reject.
+        console.log(res.status);                        // dont reject just throw a error. with the process of resolving
+        throw new error("Could not load")
+    }
+                
+    return res.json();
+})
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=>{
+    console.log(error);
+});
+
+//D:\javascript Notes\objects\promise\fetch\fetchapi.txt (console.log(res.status);)
+
+    if status 200 it means successfull response
+    if status 400 it means unsuccessfull response  
+    if status 500 it means Network response
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                             POST method
+
+As you know, fetch performs GET method by default. To Perform Any other method 
+you can specify the method by providing an object as the second argument to fetch. 
