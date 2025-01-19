@@ -1,0 +1,32 @@
+const person = { name: 'Riyas' };
+const name = person.name;
+console.log(name);          //Riyas
+
+//THIS IS USUAL WAY OF GETTING VALUES FROM THE OBJECT
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                            DESTRUCTURING USING OBJECT
+const person = {
+    name: 'Riyas',
+    age:25 
+};
+
+const {age} = person;       //with the properties we can easily get in this way of destructuring.
+
+console.log(age);          //25
+
+
+CAN ALSO USE , TO GET TWO VALUES HERE.
+
+const {name,age} = person;
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                            DESTRUCTURING USING ARRAY
+
+const person = [54,'pokli','polji'];
+
+const [poko,kolo,molo] = person;
+
+console.log(poko);   //[ 54, 'pokli', 'polji' ] 
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-

@@ -454,6 +454,52 @@ When to Use a while Loop:
 >Use a while loop when you don't know exactly how many times you need to loop but you want to continue as long as a certain condition is true.
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        FOR EACH
+
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach((number) => {                                                           //the arrow function number. we can keep whatever name we want.
+  console.log(`The current number is: ${number}`);
+});
+
+OUTPUT
+The current number is: 1
+The current number is: 2
+The current number is: 3
+The current number is: 4
+The current number is: 5
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+const fruits = ['Apple', 'Banana', 'Cherry'];
+
+fruits.forEach((fruit, index) => {
+  console.log(`Fruit ${index + 1}: ${fruit}`);
+});
+
+OUTPUT
+
+Fruit 1: Apple
+Fruit 2: Banana
+Fruit 3: Cherry
+
+
+/*
+
+forEach(function(currentValue, index, array) {
+});
+
+1. currentValue (required):
+The current element being processed in the array.
+
+2. index (optional):
+The index of the current element in the array.
+
+3. array (optional):
+The original array that forEach is iterating over.
+
+*/
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
                                                         Jump Statement
 
 break : to stop the loop iteration at one point.

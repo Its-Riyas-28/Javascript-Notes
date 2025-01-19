@@ -1,0 +1,46 @@
+                                            SPREAD VS REST
+
+If ... used in the object,array then it is called SPREAD operator.
+
+If ... in the parameters() in function then it is called REST operator. 
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+                                            CREATION OF SPREAD OPERATOR USING ARRAY
+
+const hobbies1 = ['Sports', 'Cooking'];
+const hobbies2 = [...hobbies1];             //hobbies2 = hobbies1 makes changes in both.
+hobbies2.push('Programming');               //The spread operator (...) avoids this by creating a shallow copy of the array, 
+                                            //so changes to hobbies2 do not affect hobbies1.
+
+console.log(hobbies1);
+console.log(hobbies2);
+
+/*
+    [ 'Sports', 'Cooking' ]
+    [ 'Sports', 'Cooking', 'Programming'  ]
+*/
+
+                                        INSTEAD WORKS SAME
+const hobbies2 = [...hobbies1];             ||  const hobbies2 = [...hobbies1,'Progamming'];
+hobbies2.push('Programming');               ||
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                            CREATION OF SPREAD OPERATOR USING OBJECT
+
+const person = { name: 'logesh' };
+const student = { ...person, age: 26 };
+
+console.log(person, student);
+
+// {name: 'logesh' } { name: 'logesh', age: 26 }
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                            CREATION OF REST OPERATOR USING FUNCTION
+
+const goke = function so(...args){
+    return args;
+}
+
+console.log(goke(25,88,99));        //[ [ 25, 88, 99 ] ]
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-

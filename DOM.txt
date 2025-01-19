@@ -1,0 +1,314 @@
+<html>
+  <head>
+    <title>code io</title>
+  </head>
+  <body>
+    <h1>Code IO</h1>
+  </body>
+  <script>
+    console.log(document.title);      //document will print all thing in file
+  </script>
+</html>
+
+/*
+    The document object represents the entire HTML page.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                GET ELEMENT BY ID
+<html>
+  <head>
+    <title>code io</title>
+  </head>
+  <body>
+    <h1 id="head">Code IO</h1>
+  </body>
+  <script>
+  let element = document.getElementById("head");
+  console.log(element);                                           //this will print the entire h1 element.
+  </script>
+</html>
+
+
+OUTPUT
+<h1 id="head">Code IO</h1>
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                              ERROR/WHAT HAPPENS IF THE GIVEN ID IS NOT PRESENT IN THE CODE
+<html>
+  <head>
+    <title>code io</title>
+  </head>
+  <body>
+    <h1 id="head">Code IO</h1>
+  </body>
+  <script>
+  let element = document.getElementById("koma");            //output will be null. because the element with koma as id is available.
+  console.log(element);                                           
+  </script>
+</html>
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                              USE OF TEXT CONTENT
+
+As we kow, 
+
+<h1 id="head">Code IO</h1>
+let element = document.getElementById("head");
+console.log(element);
+
+This prints whole element.
+
+OUTPUT
+<h1 id="head">Code IO</h1>
+
+If we want to print only Code IO, 
+Then we need to use textContent property.
+
+
+<html>
+  <head>
+    <title>code io</title>
+  </head>
+  <body>
+    <h1 id="head">Code IO</h1>
+  </body>
+  <script>
+    let element = document.getElementById("head");
+    element.textContent += ' YouTube Channel';
+    console.log(element);
+  </script>
+</html>
+
+OUTPUT
+
+Code IO YouTube Channel.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                EVEN IF THERE IS NO CONTENT IN HTML WE CAN ADD WITH TEXT CONTENT
+
+<h1 id="head"></h1>
+
+  <script>
+    let element = document.getElementById("head");
+    element.textContent += ' YouTube Channel';
+    console.log(element);
+  </script>
+
+OUTPUT
+YouTube Channel
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                CREATING INNER HTML ELEMENT
+
+<html>
+  <head>
+    <title>code io</title>
+  </head>
+  <body>
+    <h1 id="head">Code IO</h1>
+    <div id="box">
+
+    </div>
+  </body>
+  <script>
+    let element = document.getElementById("box");
+    element.innerHTML += '<p>Hi bro</p>';
+    console.log(element);
+  </script>
+</html>  
+
+OUTPUT IN console
+
+<div id="box">
+  <p>Hi bro</p>
+</div>
+
+OUTPUT IN WEB
+
+Code IO
+Hi bro
+
+//
+    This will create a new html element in the html file.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                            ADDING A className AND STYLE TO DIV
+<html>
+  <head>
+    <title>code io</title>
+  </head>
+  <body>
+    <h1 id="head">Code IO</h1>
+    <div id="box">
+      
+    </div>
+  </body>
+  <script>
+    let element = document.getElementById("box");
+    element.innerHTML += '<p>Hi bro</p>';
+    element.className = "bogy";                         //className added
+    element.style.color = "red";                        // color/style added
+    console.log(element.textContent);
+  </script>
+</html>
+
+OUTPUT IN CONSOLE
+
+<div id="box" class="bogy">
+  <p>Hi bro</p>
+</div>
+
+OUTPUT IN WEB
+
+Code IO
+Hi bro
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                          with id being unique we can select only one html element. if you want to select multiple element then.
+                                              ClassName / TagName can be used
+
+className:
+
+let element = document.getElementsByClassName("box");
+console.log(element[0]);                                  //it will display on HTML collection format. so [0] is used get particular one.
+
+TagName:
+let element = document.getElementsByTagName("p");
+console.log(element[0]);
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                            querySelector
+
+<html>
+<head>
+    <title>code io</title>
+</head>
+<body>
+    <h1 id="head">Code IO</h1>
+    <div id="box" class="box">
+        moka
+    </div>
+    <div id="box" class="box">
+        soka
+    </div>
+</body>
+<script>
+    let element = document.querySelector("div");              //cant select with class name
+    console.log(element);
+</script>
+</html>    
+
+//
+
+  selecting with first match element. here it is moka first.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                        Dynamically creating html elements
+
+<html>
+<head>
+    <title>code io</title>
+</head>
+<body>
+    <h1 id="head">Code IO</h1>
+    <div id="box" class="box">
+        moka
+    </div>
+    <div id="box" class="box">
+        soka
+        
+    </div>
+</body>
+<script>
+    let element = document.querySelector("div");
+    let para = document.createElement('p');
+    para.textContent += "Lorem ipsum dolor sit ame ex.";        //uptil now u cant display this in web 
+    console.log(para);
+</script>
+</html>                                            
+
+OUTPUT IN CONSOLE
+
+<p>Lorem ipsum dolor sit ame ex.</p>
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+
+para.textContent = "Lorem ipsum dolor sit ame ex.";
+para.id="pid";                                                //to create id for newly created p element
+element.append(para);                                         //to display in web
+console.log(para);                                            //append is for after.  prepend is for before.
+
+
+OUTPUT IN CONSOLE
+
+<p id="pid">Lorem ipsum dolor sit ame ex.</p>
+
+
+
+OUTPUT IN WEB
+
+moka
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, ex.
+
+soka
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                EventListner Mouse Events
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Listener Example</title>
+</head>
+<body>
+    <button id="sj">Click Me</button>
+
+    <script>
+        let btn = document.getElementById('sj');
+
+        btn.addEventListener('click', (event) => {
+            btn.textContent = 'Aana Illa';
+            console.log('clicked');
+        });
+
+        btn.addEventListener('mouseover', (event) => {
+            btn.textContent = 'Oruvella irukumo';
+            console.log('hover');
+        });
+
+        btn.addEventListener('mouseout', (event) => {
+            btn.textContent = 'Irukku';
+            console.log('mouse out');
+        });
+    </script>
+</body>
+</html>
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-
+                                                      EventListner Keyboard Events
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keydown Example</title>
+</head>
+<body>
+    <button id="sj">1</button>
+    <script>
+        let btn = document.getElementById('sj');
+
+        document.addEventListener('keydown', (event) => {                         //document is used here because if we use btn then it not possible to work on Keyboard
+            console.log(event.key);
+            switch (event.key) {
+                case 'ArrowUp':
+                    btn.textContent = Number(btn.textContent) + 1;
+                    break;
+                case 'ArrowDown':
+                    btn.textContent = Number(btn.textContent) - 1;
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-

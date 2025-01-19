@@ -1,0 +1,67 @@
+const navLink = document.querySelectorAll(".nav_link");
+const sections = document.querySelectorAll("section");
+
+function hideAllSections(){
+    sections.forEach(section =>{
+        section.classList.remove('active');                 //Here classList for getting all class that is named as active
+    })
+}
+
+navLink.forEach(link=>{
+    link.addEventListener('click',(event)=>{
+        event.preventDefault();                           //Place event.preventDefault() as early as possible in the event handler, before any other logic that depends on overriding the default behavior.
+        hideAllSections();
+        const targetSection = document.querySelector(`.${link.textContent.trim().toLowerCase().replace(/\s+/g,'-')}`);  //  ``  is used not ""
+                            //     /\s+/g
+
+                            //      /: Starts the regular expression.
+
+                            //      \s: Matches any whitespace character, such as:
+                            //      Spaces ( )
+                            //      Tabs (\t)
+                            //      Line breaks (\n)
+
+                            //      +: Matches one or more of the preceding character (in this case, one or more whitespace characters).
+
+                            //      /g: The global flag. It ensures that the regex finds all matches in the string, not just the first one.
+        
+        if(targetSection){
+            targetSection.classList.add('active');
+        }
+
+        navLink.forEach(navLinks => navLinks.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+document.querySelector('.pomodoro').classList.add('active');
+
+
+// If your sections look like this:
+
+
+// <section class="timer-section">...</section>
+// <section class="break-short">...</section>
+// <section class="break-long">...</section>
+
+// And your navigation links look like this:
+
+// <ul>
+//   <li><a class="nav_link">Pomodoro Timer</a></li>
+//   <li><a class="nav_link">Short Break</a></li>
+//   <li><a class="nav_link">Long Break</a></li>
+// </ul>
+
+// The dynamically generated class names would be:
+
+// "pomodoro-timer"
+// "short-break"
+// "long-break"
+
+// But your actual section class names are different:
+
+// "timer-section"
+// "break-short"
+// "break-long"
+
+// Since they don’t match, the targetSection variable will be null, and nothing will happen.
